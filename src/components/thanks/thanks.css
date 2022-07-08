@@ -1,0 +1,37 @@
+.thanks__page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.thanks__page__title {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.thanks__check {
+  color: green;
+  margin-bottom: 24px;
+}
+
+.thanks__page__text {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.order__form__button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #0071f0;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order__form__button:hover {
+  background-color: rgba(0, 113,240, 0.7);
+}

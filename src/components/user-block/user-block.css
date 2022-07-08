@@ -1,0 +1,49 @@
+.user__block {
+  display: flex;
+  position: relative;
+}
+
+.cart__block {
+  margin-right: 20px;
+  position: relative;
+}
+.user__menu__block {
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.user__menu__block:hover {
+  background-color: rgb(190, 242, 251);
+}
+
+
+
+.cart__block__count {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: tomato;
+  border-radius: 15px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left:15px;
+  top:-10px;
+  z-index: 2;
+}
+
+/* .user__menu__block--email {
+  display: inline;
+} */
+
+@media (max-width: 560px) {
+  .user__menu__block--email {
+    display: none;
+  }
+  .user__menu {
+    width: 100px;
+    right: 0px;
+}
+}

@@ -1,0 +1,45 @@
+.cart__page {
+  display: grid;
+  grid-gap: 20px;
+  width: 100%;
+  margin-bottom:100px
+}
+
+.cart__page__total {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr auto auto;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cart__page__total__text{
+  text-align: right;
+  margin-right: 15px;
+}
+
+.confirm__order {
+  grid-column: 1 / -1;
+  display: inline-block;
+  padding: 1em 2em;
+  margin-left: 25px;
+  border: 1px solid steelblue;;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: 0.2s;
+}
+
+.confirm__order:hover {
+  background-color: steelblue;
+}
+
+@media (max-width: 416px) {
+  .cart__page__total__text{
+    font-size: 18px;
+  }
+
+  .cart__page__total {
+    font-size: 18px;
+  }
+
+}

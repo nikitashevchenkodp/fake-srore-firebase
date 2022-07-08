@@ -1,0 +1,10 @@
+.cat__list__item {
+  list-style: none;
+  transition: 0.3s;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cat__list__item:hover {
+  background-color: rgb(225, 216, 216);
+}

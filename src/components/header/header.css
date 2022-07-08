@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.header__title {
+  color: steelblue;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.header__button {
+  background-color: steelblue;
+  padding: 10px 20px;
+}

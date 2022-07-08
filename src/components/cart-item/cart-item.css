@@ -1,0 +1,61 @@
+.cart__item {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: 
+    "pic title counter price";
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.cart__item:hover {
+  box-shadow: 0 4px 16px #ccc;
+} 
+
+.cart__item__image {
+  grid-area: pic;
+  width: 200px;
+  height: 200px;
+}
+
+.cart__item__title {
+  grid-area: title;
+  text-align: center;
+}
+
+.cart__item__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.cart__item__counter {
+  display: flex;
+  align-items: center;
+}
+
+.cart__item__delete__icon {
+  color: red;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.cart__item__price {
+  display: flex;
+  align-items: center;
+}
+
+.cart__item__counter__icon {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .cart__item {
+    justify-content: center;
+    justify-items: center;
+    grid-template-areas: 
+      "pic" "title"
+      "counter" "price"
+  }
+}

@@ -1,0 +1,26 @@
+.categories__list {
+  width: 100%;
+  margin: 0 auto 15px;
+}
+
+.categories__list__list {
+  display: grid;
+  width: 100%;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 180px));
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  align-items: center;
+}
+
+.cat__list__item {
+  list-style: none;
+  transition: 0.3s;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cat__list__item:hover {
+  background-color: rgb(225, 216, 216);
+}

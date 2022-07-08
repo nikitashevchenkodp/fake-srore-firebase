@@ -1,0 +1,19 @@
+.user__menu {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  position: absolute;
+  top: 80%;
+  right: 0;
+}
+.user__menu__btn{
+  padding: 5px 15px;
+  border: none;
+  background-color: rgb(255, 244, 244);
+  transition: all 0.4s;
+}
+
+.user__menu__btn:hover {
+  color: white;
+  background-color: rgb(76, 161, 170);
+}

@@ -1,0 +1,22 @@
+.list__item__info__tocart {
+  margin-top: 15px;
+}
+
+.list__item__info__btn {
+  margin-left: 15px;
+  display: inline;
+  padding: 8px 30px;
+  border: none;
+  background-color: rgb(234, 252, 255);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.list__item__info__btn:hover {
+  background-color: rgb(190, 242, 251);
+}
+
+.list__item__info__price {
+  font-size: 19px;
+  font-weight: bold;
+}
