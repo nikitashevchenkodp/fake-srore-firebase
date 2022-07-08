@@ -1,8 +1,7 @@
 .cart__item {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas: 
-    "pic title counter price";
+  grid-template-columns: 5fr 10fr auto auto;
   justify-content: space-between;
   align-items: center;
   transition: 0.2s;
@@ -15,15 +14,14 @@
 } 
 
 .cart__item__image {
-  grid-area: pic;
   width: 200px;
   height: 200px;
 }
 
 .cart__item__title {
-  grid-area: title;
-  text-align: center;
+  text-align: left;
 }
+
 
 .cart__item__image img {
   width: 100%;
@@ -51,11 +49,16 @@
 }
 
 @media (max-width: 600px) {
+
   .cart__item {
     justify-content: center;
     justify-items: center;
-    grid-template-areas: 
-      "pic" "title"
-      "counter" "price"
+    grid-template-columns: 1fr;
+    box-shadow: 0 4px 16px #ccc;
   }
+  
+  .cart__item__title {
+    text-align: center;
+  }
+
 }

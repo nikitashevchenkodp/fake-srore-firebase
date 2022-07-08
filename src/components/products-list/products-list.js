@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import ProductListItem from "../products-list-item";
 import Spiner from "../spiner"
 import './products-list.css'
 import { ProductsState } from "../context";
+
 
 const ProductList = React.memo(({filter, search}) => {
 
   const {list} = ProductsState()
   const {loading} = ProductsState()
   const {hasError} = ProductsState()
+
+  const [pagination, setPagination] = useState(8)
+  const [endItems, setEndItems] = useState(false)
 
   const visibleItems = (filter, list) => {
     switch(filter) {
@@ -38,25 +42,44 @@ const ProductList = React.memo(({filter, search}) => {
     }) 
   }
 
+  const items = searchInput(visibleItems(filter,list), search)
+  console.log(items);
+
+  const loadMore = () => {
+    setPagination((pagination) => pagination + 8)
+  }
 
   if(hasError) {
     return <h2>Error</h2>
   } 
 
+  const change = () => {
+    
+  }
+
+  const visible = (items.length - pagination <= 0 || items.length < 8 )
+
   if(loading) {
     return <Spiner/>
   }
 
+  if(!items.length) {
+    return <div style = {{margin: '100px auto', fontSize: "24px" }}>Try to find something else..."{search}"</div>
+  }
+
   return (
-    <div className="product__list">
-      {
-       searchInput(visibleItems(filter,list), search).map((product) => {
-          return (
-            <ProductListItem key = {product.id} product = {product} />
-          )
-        })
-      }
-    </div>
+    <>
+      <div className="product__list">
+        {
+        items.slice(0, pagination).map((product) => {
+            return (
+              <ProductListItem key = {product.id} product = {product} />
+            )
+          })
+        }
+      </div>
+      {!visible && <button className="pagination" onClick={loadMore}>Load More..</button>}
+    </>
   )
 })
 
