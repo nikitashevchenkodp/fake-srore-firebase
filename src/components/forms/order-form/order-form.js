@@ -61,11 +61,11 @@ const OrderForm = () => {
     <>
     <form className='order__form' onSubmit={onSubmit}>
       <div className='order__form__title'>
-        <h3>Заполните данные для доставки</h3>
+        <h3>Fill in the form</h3>
       </div>
 
       <div className="order__form__group">
-        <label className="order__form__label" >Ваше имя<span className='required'>*</span></label>
+        <label className="order__form__label" >Name<span className='required'>*</span></label>
         <input value={name}  type="text" placeholder=" " className="order__form__input" onChange={(e) => setName(e.target.value)}/>
       </div>
 
@@ -80,13 +80,13 @@ const OrderForm = () => {
       </div>
 
       <div className="order__form__group">
-        <label className="order__form__label" >Телефон<span className='required'>*</span></label>
+        <label className="order__form__label" >Phone<span className='required'>*</span></label>
         <input value={phone}  type="number" placeholder=" " className="order__form__input"
         onChange={(e) => setPhone(e.target.value)}/>
       </div>
 
       <div className="order__form__group">
-        <label className="order__form__label">Адрес<span className='required'>*</span></label>
+        <label className="order__form__label">Adress<span className='required'>*</span></label>
         <input
           value={adress}
           className="order__form__input"
@@ -95,7 +95,7 @@ const OrderForm = () => {
       </div>
 
       <button disabled={false} className="order__form__button">
-        Заказать
+        Confirm
       </button>
 
     </form>

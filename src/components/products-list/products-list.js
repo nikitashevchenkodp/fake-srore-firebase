@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import ProductListItem from "../products-list-item";
 import Spiner from "../spiner"
 import './products-list.css'
@@ -42,8 +42,7 @@ const ProductList = React.memo(({filter, search}) => {
     }) 
   }
 
-  const items = searchInput(visibleItems(filter,list), search)
-  console.log(items);
+  const items = useMemo(() => searchInput(visibleItems(filter,list), search), [filter, search, list])
 
   const loadMore = () => {
     setPagination((pagination) => pagination + 8)

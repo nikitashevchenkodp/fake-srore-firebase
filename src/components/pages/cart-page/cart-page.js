@@ -19,13 +19,13 @@ const CartPage = () => {
     )
   })
 
-  const inner = firebaseCart.length > 0 ? cartItems : "Ваша корзина пуста"
-  const confirm = firebaseCart.length > 0 ? <button className="confirm__order" onClick={() => setConfirm(!isConfirm)}>Оформить заказ</button> : null
+  const inner = firebaseCart.length > 0 ? cartItems : "Your cart is empty..Lets add something!"
+  const confirm = firebaseCart.length > 0 ? <button className="confirm__order" onClick={() => setConfirm(!isConfirm)}>Place an order</button> : null
   return (
     <div className="cart__page">
       {inner}
       <div className="cart__page__total">
-        <span className="cart__page__total__text">{count} товаров на сумму</span>
+        <span className="cart__page__total__text">{count} items on</span>
         <span className="cart__page__total__price">$ {calcTotalPrice(firebaseCart).toFixed(2)}</span>
         {confirm}
       </div>

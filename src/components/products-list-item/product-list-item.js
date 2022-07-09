@@ -26,7 +26,6 @@ const ProductListItem = React.memo(({product}) => {
 
   const adToFavorite = async (e) => {
     e.stopPropagation()
-    console.dir(e)
     if(isItemFavotite) {
       const productRef = doc(db, user?.uid, "favorites");
 
